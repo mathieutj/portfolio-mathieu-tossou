@@ -56,6 +56,29 @@ footer { padding: 4rem 0; text-align: center; color: #94a3b8; font-size: 0.9rem;
     .nav-links { display: none; } /* On simplifie pour le mobile */
     .hero { padding: 5rem 0; }
     .card { padding: 1.5rem; }
+    /* On cache les liens textuels "Projets" et "Expertise" */
+    .nav-links a:not(.btn-contact) {
+        display: none !important;
+    }
+
+    /* On s'assure que le conteneur reste visible et aligné à droite */
+    .nav-links {
+        display: flex !important;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    /* On stylise le bouton pour qu'il soit bien net sur mobile */
+    .btn-contact {
+        display: inline-block !important;
+        padding: 8px 16px;
+        font-size: 14px;
+        background-color: #000; /* Couleur noire comme sur ta capture */
+        color: #fff !important;
+        border-radius: 8px;
+        margin-left: 0 !important;
+        white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+    }
 }
 .project-link {
     display: inline-block;
@@ -87,4 +110,5 @@ footer { padding: 4rem 0; text-align: center; color: #94a3b8; font-size: 0.9rem;
 
 /* Si tu veux que TOUTE la carte soit un lien, tu peux aussi entourer 
    le contenu de la carte par une balise <a>, mais la méthode du bouton 
+
    est souvent plus propre pour l'accessibilité. */
